@@ -1,0 +1,379 @@
+#, fuzzy
+msgid ""
+msgstr ""
+"Plural-Forms: nplurals=INTEGER; plural=EXPRESSION;\n"
+"Project-Id-Version: Listar\n"
+"POT-Creation-Date: 2019-11-23 23:15+0700\n"
+"PO-Revision-Date: 2019-11-23 23:14+0700\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 2.2.4\n"
+"X-Poedit-Basepath: ..\n"
+"X-Poedit-Flags-xgettext: --add-comments=translators:\n"
+"X-Poedit-WPHeader: listing.php\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-KeywordsList: __;_e;_n:1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;esc_attr__;"
+"esc_attr_e;esc_attr_x:1,2c;esc_html__;esc_html_e;esc_html_x:1,2c;_n_noop:1,2;"
+"_nx_noop:3c,1,2;__ngettext_noop:1,2\n"
+"X-Poedit-SearchPath-0: .\n"
+"X-Poedit-SearchPathExcluded-0: *.min.js\n"
+
+#: controllers/class-listar-place-controller.php:19
+#: controllers/class-listar-wishlist-controller.php:20
+msgid "Current page of the collection."
+msgstr ""
+
+#: controllers/class-listar-place-controller.php:27
+#: controllers/class-listar-wishlist-controller.php:28
+msgid "Maximum number of items to be returned in result set."
+msgstr ""
+
+#: controllers/class-listar-place-controller.php:45
+msgid "ID."
+msgstr ""
+
+#: controllers/class-listar-place-controller.php:156
+#: controllers/class-listar-wishlist-controller.php:129
+msgid "The page number requested is larger than the number of pages available."
+msgstr ""
+
+#: controllers/class-listar-wishlist-controller.php:47
+msgid "Post ID."
+msgstr ""
+
+#: controllers/class-listar-wishlist-controller.php:84
+msgid "Permission denied"
+msgstr ""
+
+#: controllers/class-listar-wishlist-controller.php:169
+msgid "Saved wishlist successfully"
+msgstr ""
+
+#: controllers/class-listar-wishlist-controller.php:197
+msgid "Removed wishlist successfully"
+msgstr ""
+
+#: controllers/class-listar-wishlist-controller.php:221
+msgid "Reset wishlist successfully"
+msgstr ""
+
+#: listar.php:254
+msgctxt "Post Type General Name"
+msgid "Listars"
+msgstr ""
+
+#: listar.php:255
+msgctxt "Post Type Singular Name"
+msgid "Listar"
+msgstr ""
+
+#: listar.php:257
+msgid "Parent"
+msgstr ""
+
+#: listar.php:258
+msgid "All Location"
+msgstr ""
+
+#: listar.php:259 listar.php:382
+msgid "View Location"
+msgstr ""
+
+#: listar.php:260
+msgid "Add Location"
+msgstr ""
+
+#: listar.php:261
+msgid "Add New"
+msgstr ""
+
+#: listar.php:262
+msgid "Edit Listar"
+msgstr ""
+
+#: listar.php:263
+msgid "Update Listar"
+msgstr ""
+
+#: listar.php:264
+msgid "Search Listar"
+msgstr ""
+
+#: listar.php:265
+msgid "Not Listar found"
+msgstr ""
+
+#: listar.php:266
+msgid "Not found in Trash"
+msgstr ""
+
+#: listar.php:298
+msgctxt "Taxonomy General Name"
+msgid "Feature"
+msgstr ""
+
+#: listar.php:299
+msgctxt "Taxonomy Singular Name"
+msgid "Feature"
+msgstr ""
+
+#: listar.php:300
+msgid "Features"
+msgstr ""
+
+#: listar.php:301
+msgid "All features"
+msgstr ""
+
+#: listar.php:302
+msgid "Parent Feature"
+msgstr ""
+
+#: listar.php:303
+msgid "Parent Feature:"
+msgstr ""
+
+#: listar.php:304
+msgid "New Feature"
+msgstr ""
+
+#: listar.php:305
+msgid "Add New Feature"
+msgstr ""
+
+#: listar.php:306
+msgid "Edit Feature"
+msgstr ""
+
+#: listar.php:307
+msgid "Update Feature"
+msgstr ""
+
+#: listar.php:308
+msgid "View Feature"
+msgstr ""
+
+#: listar.php:309 listar.php:346 listar.php:383
+msgid "Separate items with commas"
+msgstr ""
+
+#: listar.php:310 listar.php:347 listar.php:384
+msgid "Add or Remove Reature"
+msgstr ""
+
+#: listar.php:311 listar.php:348 listar.php:385
+msgid "Choose from the most used"
+msgstr ""
+
+#: listar.php:312
+msgid "Popular Feature"
+msgstr ""
+
+#: listar.php:313
+msgid "Search Features"
+msgstr ""
+
+#: listar.php:314 listar.php:351 listar.php:388
+msgid "Not Found"
+msgstr ""
+
+#: listar.php:315
+msgid "No features"
+msgstr ""
+
+#: listar.php:316
+msgid "Feature list"
+msgstr ""
+
+#: listar.php:317
+msgid "Feature list navigation"
+msgstr ""
+
+#: listar.php:335
+msgctxt "Taxonomy General Name"
+msgid "Category"
+msgstr ""
+
+#: listar.php:336
+msgctxt "Taxonomy Singular Name"
+msgid "Category"
+msgstr ""
+
+#: listar.php:337
+msgid "Categories"
+msgstr ""
+
+#: listar.php:338
+msgid "All categories"
+msgstr ""
+
+#: listar.php:339
+msgid "Parent Category"
+msgstr ""
+
+#: listar.php:340
+msgid "Parent Category:"
+msgstr ""
+
+#: listar.php:341
+msgid "New Category"
+msgstr ""
+
+#: listar.php:342
+msgid "Add New Category"
+msgstr ""
+
+#: listar.php:343
+msgid "Edit Category"
+msgstr ""
+
+#: listar.php:344
+msgid "Update Category"
+msgstr ""
+
+#: listar.php:345
+msgid "View Category"
+msgstr ""
+
+#: listar.php:349
+msgid "Popular Category"
+msgstr ""
+
+#: listar.php:350
+msgid "Search Category"
+msgstr ""
+
+#: listar.php:352 listar.php:389
+msgid "No categories"
+msgstr ""
+
+#: listar.php:353
+msgid "Category list"
+msgstr ""
+
+#: listar.php:354
+msgid "Category list navigation"
+msgstr ""
+
+#: listar.php:372
+msgctxt "Taxonomy General Name"
+msgid "Location"
+msgstr ""
+
+#: listar.php:373
+msgctxt "Taxonomy Singular Name"
+msgid "Location"
+msgstr ""
+
+#: listar.php:374
+msgid "Locations"
+msgstr ""
+
+#: listar.php:375
+msgid "All Locatios"
+msgstr ""
+
+#: listar.php:376
+msgid "Parent Location"
+msgstr ""
+
+#: listar.php:377
+msgid "Parent Location:"
+msgstr ""
+
+#: listar.php:378
+msgid "New Location"
+msgstr ""
+
+#: listar.php:379
+msgid "Add New Location"
+msgstr ""
+
+#: listar.php:380
+msgid "Edit Location"
+msgstr ""
+
+#: listar.php:381
+msgid "Update Location"
+msgstr ""
+
+#: listar.php:386
+msgid "Popular Location"
+msgstr ""
+
+#: listar.php:387
+msgid "Search Location"
+msgstr ""
+
+#: listar.php:390
+msgid "Location list"
+msgstr ""
+
+#: listar.php:391
+msgid "Location list navigation"
+msgstr ""
+
+#: listar.php:419
+msgid "Invalid ID."
+msgstr ""
+
+#: listar.php:425
+msgid "Invalid data."
+msgstr ""
+
+#: views/metadata/category-edit.php:20 views/metadata/category.php:13
+#: views/metadata/feature-edit.php:20 views/metadata/feature.php:13
+#: views/metadata/location-edit.php:4 views/metadata/location.php:3
+msgid "Image"
+msgstr ""
+
+#: views/metadata/category-edit.php:32 views/metadata/category.php:17
+#: views/metadata/feature-edit.php:32 views/metadata/feature.php:17
+#: views/metadata/location-edit.php:16 views/metadata/location.php:7
+msgid "Add Image"
+msgstr ""
+
+#: views/metadata/category-edit.php:33 views/metadata/category.php:18
+#: views/metadata/feature-edit.php:33 views/metadata/feature.php:18
+#: views/metadata/location-edit.php:17 views/metadata/location.php:8
+msgid "Remove Image"
+msgstr ""
+
+#: views/metadata/listar.php:93
+msgid "Add/Edit Gallery"
+msgstr ""
+
+#: views/metadata/listar.php:94
+msgid "Clear"
+msgstr ""
+
+#: views/setting/option.php:3
+msgid "Settings"
+msgstr ""
+
+#: views/setting/option.php:103
+msgid "Save Changes"
+msgstr ""
+
+#. Plugin Name of the plugin/theme
+msgid "Listar"
+msgstr ""
+
+#. Plugin URI of the plugin/theme
+msgid "http://passionui.com/"
+msgstr ""
+
+#. Description of the plugin/theme
+msgid "A documentation plugin for WordPress"
+msgstr ""
+
+#. Author of the plugin/theme
+msgid "Paul"
+msgstr ""
+
+#. Author URI of the plugin/theme
+msgid "https://passionui.com/"
+msgstr ""

@@ -1,0 +1,254 @@
+.listar-gallery-screenshot {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.listar-gallery-screenshot .screen-thumb img {
+    width: 120px;
+    padding-right: 15px;
+    padding-bottom: 5px;
+}
+
+.listar-attachment-list {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    padding-bottom: 10px;
+}
+.listar-attachment-list .file-attachment{
+    padding: 2px;
+}
+.listar-attachment-list .file-name {
+    padding-right: 10px;
+}
+
+.listar-attachment-list .file-name a {
+    text-decoration: none;
+}
+
+.listar-attachment-list .file-size {
+    color: gray;
+}
+
+.form-table.table-hours {
+    table-layout: fixed;
+}
+
+.form-table thead {
+    border-bottom: 1px solid #d4d9d7;
+}
+
+.listar-hr {
+    border-top: 1px dotted grey;
+}
+/* Override icon */
+
+.iconpicker-popover.popover.right>.arrow,
+.iconpicker-popover.popover.rightTop>.arrow,
+.iconpicker-popover.popover.rightBottom>.arrow {
+    left: 25px;
+}
+
+
+/** Form fields **/
+
+.listar-fields .form-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.listar-fields .inline {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+}
+
+.listar-fields .pad-top-10 {
+    padding-top: 10px;
+}
+
+.listar-fields .pad-top-20 {
+    padding-top: 20px;
+}
+
+.listar-fields .pad-bottom-20 {
+    padding-bottom: 20px;
+}
+
+.listar-fields .pad-left-20 {
+    padding-left: 20px;
+}
+
+.listar-fields .pad-20 {
+    padding-top: 20px;
+}
+
+.listar-fields .margin-top-20 {
+    margin-top: 20px;
+}
+
+.listar-fields .col-20 {
+    float: left;
+    width: 20%;
+}
+
+.listar-fields .col-50 {
+    float: left;
+    width: 50%;
+}
+
+.listar-fields .col-40 {
+    float: left;
+    width: 40%;
+}
+
+.listar-fields .w100 {
+    width: 100%;
+}
+
+.listar-fields .w30 {
+    width: 30%;
+}
+
+.listar-fields .listar-field-label {
+    float: left;
+    width: 20%;
+    margin: 0;
+}
+
+.listar-fields .listar-field-label label {
+    display: block;
+    font-weight: bold;
+    margin: 0 0 3px;
+    padding: 0;
+}
+
+.listar-fields .listar-field-map-search {
+    width: 200px;
+}
+
+.listar-fields .slider-price {
+    color: #e5634d;
+    font-weight: bold;
+    text-align: right;
+}
+
+.listar-fields .long-lat-field {
+    width: 100%;
+}
+
+.listar-fields .slider-amount {
+    border: 0;
+    color: #e5634d;
+    font-weight: bold;
+    background: none;
+    box-shadow: none;
+    width: 70px;
+}
+
+.listar-fields .pull-right {
+    float: right;
+}
+
+.listar-fields label.w100 {
+    width: 120px;
+    vertical-align: middle;
+    float: left;
+}
+
+.listar-fields .w100p {
+    width: 100%;
+}
+
+.listar-side .form-table .day {
+    width: 40px;
+    align-self: center;
+}
+
+.listar-side .social-network .item {
+    display: flex;
+    flex-direction: row;
+    padding-bottom: 5px;
+}
+
+.listar-side .social-network .item label {
+    width: 100px;
+    align-self: center;
+}
+
+.listar-side .opening-hour {
+    padding-bottom: 5px;
+    display: flex;
+    flex-direction: row;
+}
+
+.listar-table td {
+    padding: 0px 5px 5px 0px;
+}
+.listar-table tr.hidden{
+    display: none;
+}
+.listar-table .col-head-1st,
+.listar-table .col-body-1st{
+    width: 5px;
+}
+.listar-table .txt-left{
+    text-align: left;
+}
+.listar-fields .hidden, .listar-hidden {
+    display: none;
+}
+.listar-fields .bold{
+    font-weight: bold;
+}
+.listar-fields .error-message {
+    color: #d63638;
+}
+#listar-estimate-price {
+    color: #d63638;
+    float: right;
+}
+
+/** Booking **/
+.listar-booking-box {
+    clear: both;
+    display: flex
+}
+
+.listar-booking-box #user-info,
+.listar-booking-box #booking-info{
+    width: 50%;
+    padding: 0 2% 0 0;
+    flex-direction: row;
+}
+
+/** Menu Tab **/
+.listar-setting-box {
+    display: flex; 
+    flex-direction: row;
+}
+.listar-setting-box .postbox {
+    border: none;
+}
+.listar-setting-form {
+    width: 100%;
+}
+.listar-nav-tab-verticle {
+    width: 200px;
+    margin-top: 11px 
+}
+
+.listar-nav-tab-verticle li {
+    padding: 8px 10px;
+}
+
+.listar-nav-tab-verticle li.li-current {
+    background-color: #fff;
+    border-left: 3px solid #E5634D;
+}
+
+.listar-nav-tab-verticle li a {
+    text-decoration: none;
+}
+

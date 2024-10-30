@@ -1,0 +1,238 @@
+<?php
+namespace ListarWP\Plugin\Libraries;
+use Exception;
+
+class Cart {
+
+    /**
+     * cart items
+     * @var array
+     */
+    public $data = [];
+
+    /**
+     * Item schema
+     * @var array
+     */
+    private $_item_schema = [
+        'id'      => '', // sku, id
+        'qty'     => 1,  // quantity
+        'price'   => 0,  // price float|int
+        'name'    => '', // item name
+        'image'    => '', // item image
+        'options' => []  // item option
+    ];
+
+    public function __construct()
+    {
+
+    }
+
+    /**
+     * Insert item
+     * @param array $item
+     * @throws Exception
+     */
+    public function insert($item = [])
+    {
+        if(empty($item)) {
+            throw new Exception(__( 'Can not insert empty item.', 'listar'));
+        }
+
+        if(!isset($item['id'])) {
+            throw new Exception(__( 'Undefined ID of item.', 'listar'));
+        };
+
+        if(!isset($item['name'])) {
+            throw new Exception(__( 'Undefined name of item.', 'listar'));
+        };
+
+        $item_schema = $this->_set_item_schema($item);
+        $exist = FALSE;
+
+        // Check exist
+        if(!empty($this->data)) {
+            foreach ($this->data as $row_id => &$row) {
+                if ($row_id == $item_schema['row_id']) {
+                    $row['qty'] += $item_schema['qty'];
+                    $this->_calculate_row_total($row);
+                    $exist = TRUE;
+                    break;
+                }
+            }
+        }
+
+        // If not exist > push to cart array
+        if(!$exist) {
+            $this->data[] = $item_schema;
+        }
+    }
+
+    /**
+     * Items to update in the cart
+     * @param array $items
+     * @return bool
+     */
+    public function update($items = [])
+    {
+        if(!empty($this->data) && !empty($items)) {
+            foreach ($items as $item) {
+                if(isset($item['row_id']) && isset($this->data[$item['row_id']])) {
+                    $this->_calculate_row_total($item);
+                    $this->data[$item['row_id']] = $item;
+                }
+            }
+
+            return TRUE;
+        }
+        return FALSE;
+    }
+
+    /**
+     * Remove item from cart
+     * @param string $row_id
+     * @return bool
+     */
+    public function remove($row_id = '')
+    {
+        if(isset($this->data[$row_id])) {
+            unset($this->data[$row_id]);
+            return TRUE;
+        }
+
+        return FALSE;
+    }
+
+    /**
+     * Set data once time
+     * @param array $data
+     */
+    public function set_data($data = [])
+    {
+        if(!empty($data)) {
+            foreach ($data as $item) {
+                $item_schema = $this->_set_item_schema($item);
+                $this->_calculate_row_total($item_schema);
+                $this->data[$item_schema['row_id']] = $item_schema;
+            }
+        }
+    }
+
+    /**
+     * Total amount
+     * @return float|int
+     */
+    public function total()
+    {
+        $total = 0;
+        if(!empty($this->data)) {
+            foreach ($this->data as $row_id => $item) {
+                $total += $item['qty'] * $item['price'];
+            }
+        }
+
+        return $total;
+    }
+
+    /**
+     * Total amount of items in the cart
+     * - Sum of qty
+     * @return int
+     */
+    public function total_items()
+    {
+        $total = 0;
+        if(!empty($this->data)) {
+            foreach ($this->data as $item) {
+                $total += $item['qty'];
+            }
+        }
+        return $total;
+    }
+
+    /**
+     * Get content item of cart
+     * @return array
+     */
+    public function contents()
+    {
+        if(!empty($this->data)) {
+            return array_values($this->data);
+        }
+
+        return [];
+    }
+
+    /**
+     * Check cart is empty
+     * @return bool
+     */
+    public function is_empty()
+    {
+        return empty($this->data);
+    }
+
+    /**
+     * Get item of cart
+     * @param string $row_id
+     * @return array|mixed
+     */
+    public function get_item($row_id = '')
+    {
+        return isset($this->data[$row_id]) ? $this->data[$row_id] : [];
+    }
+
+    /**
+     * Check item has option
+     * @param string $row_id
+     * @return bool
+     */
+    public function has_options($row_id = '')
+    {
+        return isset($this->data[$row_id]) && isset($this->data[$row_id]['options']);
+    }
+
+    /**
+     * Reset cart
+     * @return void
+     */
+    public function destroy()
+    {
+        $this->data = [];
+    }
+
+    /**
+     * Set item schema
+     * > make sure same key
+     * @param array $item
+     * @return array
+     */
+    private function _set_item_schema($item = [])
+    {   $item['row_id'] = $this->_get_row_id($item);
+        return array_merge($this->_item_schema, $item);
+    }
+
+    /**
+     * Get row id
+     * The row ID is a unique identifier that is generated by the cart code
+     * @param array $item
+     * @return string
+     */
+    private function _get_row_id($item = [])
+    {
+        return md5($item['id'].$item['name'].serialize($item['options']));
+    }
+
+    /**
+     * Calculate row_total
+     * @param array $item
+     */
+    private function _calculate_row_total(&$item = [])
+    {
+        if(isset($item['price']) && isset($item['qty'])) {
+            $item['total'] = $item['price'] * $item['qty'];
+        } else {
+            $item['total'] = 0;
+        }
+    }
+}
